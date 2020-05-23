@@ -1,0 +1,91 @@
+/*********************** FOOTER **************************/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+
+    width: 250px;
+}
+
+footer .line {
+    width: 250px;
+    height: 2px;
+    background-color: #ff2700;
+    margin: 5px;
+    margin: 0.5vw;
+
+}
+
+footer img {
+    width: 35px;
+}
+
+footer .follow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .bottom {
+    margin: 0;
+}
+
+footer .bottom h4 {
+    display: flex;
+    flex-direction: column;
+    margin: 1;
+    font-size: 0.9rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/*********************** FOOTER SLUT **************************/
+
+
+@media only screen and (min-width: 600px) {
+
+    /*********************** FOOTER **************************/
+
+    footer {
+        width: 1000px;
+    }
+
+    footer .line {
+        width: 1000px;
+    }
+
+    footer img {
+        width: 35px;
+    }
+
+    footer .bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        width: 900px;
+    }
+
+    /*********************** FOOTER SLUT **************************/
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    /*********************** FOOTER **************************/
+    footer {
+        width: 700px;
+    }
+
+    footer .line {
+        width: 700px;
+    }
+
+    footer .bottom {
+        width: 700px;
+    }
+
+    /*********************** FOOTER SLUT **************************/
+}
