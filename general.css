@@ -1,3 +1,144 @@
+body {
+    margin: auto;
+    background-image: url('image/baggrund.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+#background_banner {
+    position: fixed;
+    left: 15%;
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+    z-index: -1;
+
+
+}
+
+/********************* NAV *********************/
+nav {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+
+
+
+.background {
+    position: relative;
+    z-index: -4;
+}
+
+.background .image {
+    background-image: url(image/baggrund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background .banner {
+    background-color: rgba(255, 255, 255, 0.65);
+    height: 100vh;
+    width: 75%;
+    margin: auto;
+}
+
+
+
+.burger div {
+    display: block;
+
+    width: 25px;
+    height: 3px;
+    background-color: #1319A2;
+    margin: 5px;
+}
+
+
+nav a {
+    text-decoration: none;
+}
+
+
+nav .nav_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vw;
+}
+
+.logo {
+    color: #ff2700;
+}
+
+.nav_right ul {
+    list-style-type: none;
+    color: #1319A2;
+
+}
+
+.nav_links {
+    padding: 0;
+}
+
+.nav_right li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+
+
+    font-size: 1.5rem;
+
+    margin-left: 16vw;
+    margin-right: 16vw;
+
+    border-bottom: solid 2px red;
+    /*    background-color: white;*/
+
+
+    z-index: 6;
+}
+
+.nav_right li a {
+    color: #1319A2;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+.nav_right {
+    /*
+    background-image: url(image/baggrund.png);
+    height: 100vh;
+    z-index: 3;
+*/
+}
+
+
+.hide {
+    display: none;
+}
+
+
+
+/********************* NAV SLUT*********************/
+
+
+#splash_video img {
+    width: 100vw;
+    margin: none;
+
+    opacity: 100%;
+
+    filter: grayscale(100%)
+}
+
 /*********************** FOOTER **************************/
 footer {
     display: flex;
@@ -47,6 +188,77 @@ footer .bottom h4 {
 
 @media only screen and (min-width: 600px) {
 
+    #background_banner {
+        left: 10%;
+        width: 80%;
+    }
+
+    /********************* NAV *********************/
+
+    .background {
+        display: none
+    }
+
+    .background .image {
+        display: none;
+    }
+
+    .background .banner {
+        display: none;
+    }
+
+    .burger div {
+        display: none;
+    }
+
+    .hide {
+        display: block;
+        ;
+    }
+
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    nav .nav_top {
+        padding: 0.5vw;
+    }
+
+    .nav_right li {
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+
+        font-size: 1.5rem;
+        margin: 0;
+        border-bottom: none;
+        border-left: solid 2px #ff2700;
+
+
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+    .nav_links a:hover {
+        color: #ff2700;
+    }
+
+    nav li:first-child {
+        border-left: none;
+    }
+
+    /********************* NAV SLUT*********************/
+
     /*********************** FOOTER **************************/
 
     footer {
@@ -76,15 +288,15 @@ footer .bottom h4 {
 
     /*********************** FOOTER **************************/
     footer {
-        width: 700px;
+        width: 600px;
     }
 
     footer .line {
-        width: 700px;
+        width: 600px;
     }
 
     footer .bottom {
-        width: 700px;
+        width: 600px;
     }
 
     /*********************** FOOTER SLUT **************************/
