@@ -1,0 +1,52 @@
+#splash_video img {
+    width: 100vw;
+    margin: none;
+
+    opacity: 100%;
+
+    filter: grayscale(100%)
+}
+
+@media only screen and (min-width: 600px) {
+    /*
+    #splash_video .arrow {
+        display: block;
+    }
+*/
+
+    #splash_video .arrow img {
+        position: absolute;
+        width: 4vw;
+        left: 48%;
+        top: 29%;
+        z-index: 7;
+        align-items: flex-end;
+
+        filter: grayscale(0%)
+    }
+
+
+    /******************* Animationer ********************/
+    .bouncing {
+        top: 1vw;
+        animation-name: bouncing_kf;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+        /*    animation-timing-function: ease-in;*/
+
+    }
+
+    @keyframes bouncing_kf {
+        0% {
+            transform: translateY(-13.5vw)
+        }
+
+        100% {
+            transform: translateY(-12vw)
+        }
+    }
+
+    /******************* Animationer slut ********************/
+}

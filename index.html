@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forside</title>
     <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -35,11 +36,11 @@
                 </li>
 
                 <li>
-                    <a href="om_os.html">Prints</a>
+                    <a href="prints.html">Prints</a>
                 </li>
 
                 <li>
-                    <a href="destinationer.html">Info</a>
+                    <a href="info.html">Info</a>
                 </li>
 
                 <li>
@@ -50,6 +51,7 @@
 
         </div>
     </nav>
+
     <div class="background hide ">
         <div class="image"></div>
         <div class="banner"></div>
@@ -62,7 +64,21 @@
         <div>
             <img src="image/Sk%C3%A6rmbillede%202020-05-21%20kl.%2010.57.56.png" alt="">
         </div>
+        <div class="arrow bouncing">
+            <img src="image/SVG/arrow.svg" alt="">
+        </div>
     </section>
+
+    <section id="historie"></section>
+    <template>
+        <article>
+            <div class="">
+                <h2 class="txt"></h2>
+
+                <div class="img"></div>
+            </div>
+        </article>
+    </template>
 
 
 
@@ -88,7 +104,50 @@
             <h4>Registreret tatovør ved Sikkerhedsstyrelsen</h4>
         </div>
     </footer>
+
+
     <script src="nav.js"></script>
+
+    <script>
+        const posturl = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/historie/";
+
+        let artikler = [];
+        let template;
+
+
+        function start() {
+            console.log("start");
+            hentJSON();
+        }
+
+        async function hentJSON() {
+            console.log("hent json");
+
+            const resspons = await fetch(posturl)
+            artikler = await resspons.json();
+
+            visTemplate();
+        }
+
+        function visTemplate() {
+
+            console.log(artikler);
+            let dataFill = document.querySelector("#historie");
+            let template = document.querySelector("template");
+
+
+            artikler.forEach(element => {
+                let klon = template.cloneNode(true).content;
+                klon.querySelector(".txt").textContent = `${element.title.rendered}`;
+                klon.querySelector(".img").innerHTML = `${element.billede.rendered}`;
+//                'klon.querySelector("article").addEventListener("click", () => {
+ // location.href = `historie.html?id=${element.id}`;
+ // })'
+                dataFill.appendChild(klon);
+            })
+        }
+
+    </script>
 </body>
 
 </html>

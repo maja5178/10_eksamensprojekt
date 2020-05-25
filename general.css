@@ -129,16 +129,6 @@ nav ul li:last-child {
 
 /********************* NAV SLUT*********************/
 
-
-#splash_video img {
-    width: 100vw;
-    margin: none;
-
-    opacity: 100%;
-
-    filter: grayscale(100%)
-}
-
 /*********************** FOOTER **************************/
 footer {
     display: flex;

@@ -15,27 +15,36 @@
          <div></div>
      </main>
 
-     <script>
-         document.addEventListener("DOMContentLoaded", start);
+     <section id="historie"></section>
+     <template>
+         <article>
+             <div class="">
+                 <h2 class="txt"></h2>
 
-         const url = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/pages/7";
+                 <div class="img"></div>
+             </div>
+         </article>
+     </template>
+
+     <script>
+         document.addEventListener("DOMContentLoaded", start1);
+
+         const pageurl = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/pages/7";
 
          let sektioner = [];
          let json;
 
 
-         function start() {
+         function start1() {
              console.log("start");
-             hentJSON();
+             hentJSON1();
          }
 
-         async function hentJSON() {
+         async function hentJSON1() {
              console.log("hent json");
 
-             const resspons = await fetch(url)
-
+             const resspons = await fetch(pageurl)
              json = await resspons.json();
-
              visSide();
          }
 
@@ -43,6 +52,50 @@
              console.log(json);
              document.querySelector("main h1").textContent = json.title.rendered;
              document.querySelector("main div").innerHTML = json.content.rendered;
+             getJson();
+         }
+
+
+
+
+
+
+         document.addEventListener("DOMContentLoaded", getJson);
+
+         async function getJson() {
+             //hent en enkelt ret udfra id'et
+             let jsonData = await fetch(`http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/historie/`);
+             historie = await jsonData.json();
+             visDestination();
+         }
+
+
+         //         const posturl = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/historie/";
+
+         let artikler = [];
+         let template;
+
+
+         function visDestination() {
+
+             console.log(artikler);
+             let dataFill = document.querySelector("#historie");
+             let template = document.querySelector("template");
+
+
+             artikler.forEach(element => {
+                 let klon = template.cloneNode(true).content;
+                 //                 klon.querySelector(".txt").textContent = historie.tekst;
+                 //                 klon.querySelector(".img").innerHTML = `${element.billede.rendered}`;
+
+                 //                 document.querySelector(".img").src = historie.billede.guid;
+
+                 klon.querySelector(".txt").textContent = historie.tekst;
+                 //                'klon.querySelector("article").addEventListener("click", () => {
+                 // location.href = `historie.html?id=${element.id}`;
+                 // })'
+                 dataFill.appendChild(klon);
+             })
          }
 
      </script>
