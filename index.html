@@ -69,16 +69,18 @@
         </div>
     </section>
 
-    <section id="historie"></section>
-    <template>
-        <article>
-            <div class="">
-                <h2 class="txt"></h2>
+    <section id="about">
+        <h1>Om mig</h1>
+        <template>
+            <article>
+                <div class="col">
+                    <p class="p"></p>
+                    <img class="img" src="" alt="">
+                </div>
+            </article>
+        </template>
 
-                <div class="img"></div>
-            </div>
-        </article>
-    </template>
+    </section>
 
 
 
@@ -109,6 +111,8 @@
     <script src="nav.js"></script>
 
     <script>
+        document.addEventListener("DOMContentLoaded", start);
+
         const posturl = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/historie/";
 
         let artikler = [];
@@ -125,24 +129,24 @@
 
             const resspons = await fetch(posturl)
             artikler = await resspons.json();
-
             visTemplate();
         }
 
         function visTemplate() {
 
             console.log(artikler);
-            let dataFill = document.querySelector("#historie");
+            let dataFill = document.querySelector("#about");
             let template = document.querySelector("template");
 
 
             artikler.forEach(element => {
                 let klon = template.cloneNode(true).content;
-                klon.querySelector(".txt").textContent = `${element.title.rendered}`;
-                klon.querySelector(".img").innerHTML = `${element.billede.rendered}`;
-//                'klon.querySelector("article").addEventListener("click", () => {
- // location.href = `historie.html?id=${element.id}`;
- // })'
+                klon.querySelector(".p").textContent = `${element.tekst}`;
+                klon.querySelector(".img").src = `${element.billede.guid}`;
+                klon.querySelector(".img").alt = `${element.title.rendered}`;
+                //                klon.querySelector("article").addEventListener("click", () => {
+                // location.href = `destination.html?id=${element.id}`;
+                // })
                 dataFill.appendChild(klon);
             })
         }

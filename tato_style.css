@@ -1,0 +1,33 @@
+img {
+    width: 100%
+}
+
+#destinatioer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 42px;
+    margin: auto;
+    max-width: 900px;
+
+
+}
+
+/*
+#destinatioer .img {
+    align-self: stretch;
+    place-self: center;
+}
+*/
+
+#destinatioer img {
+    border: solid 12px white;
+
+
+}
+
+
+/*
+.gallery:nth-child(2n+0) {
+    display: grid;
+    grid-template-columns: (auto-fill, minmax(250px, 1fr));
+}*/

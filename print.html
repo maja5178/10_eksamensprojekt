@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tattoos</title>
+
+     <link rel="stylesheet" href="general.css">
+     <link rel="stylesheet" href="tato_style.css">
+ </head>
+
+ <body>
+
+     <section id="splach"></section>
+     <main>
+         <h1></h1>
+         <div></div>
+     </main>
+
+
+
+
+     <section id="top_content">
+         <img class="img" src="" alt="">
+         <p class="navn"></p>
+         <img class="mini_billede_1" src="" alt="">
+         <img class="mini_billede_2" src="" alt="">
+         <img class="mini_billede_3" src="" alt="">
+     </section>
+
+
+     <script>
+         //find parametre (variabler) i url'en
+         let urlParams = new URLSearchParams(window.location.search);
+         //returner værdien for variablen "id"
+         let id = urlParams.get("id");
+         let print;
+         document.addEventListener("DOMContentLoaded", getJson);
+
+         async function getJson() {
+             //hent en enkelt ret udfra id'et
+             let jsonData = await fetch(`http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/print/${id}`);
+             print = await jsonData.json();
+             visDestination();
+         }
+
+         //vis data om retten
+         function visDestination() {
+             document.querySelector(".img").src = print.billede.guid;
+             document.querySelector(".navn").textContent = print.title.rendered;
+             document.querySelector(".mini_billede_1").src = print.mini_billede_1.guid;
+             document.querySelector(".mini_billede_2").src = print.mini_billede_2.guid;
+             document.querySelector(".mini_billede_3").src = print.mini_billede_3.guid;
+             //
+             // document.querySelector(".top_txt").innerHTML = print.top_tekst;
+             // document.querySelector(".collum1_overskrift").innerHTML = destination.collum1_overskrift;
+             // document.querySelector(".collum_1").innerHTML = print.collum_1;
+             // document.querySelector(".collum2_overskrift").innerHTML = destination.collum2_overskrift;
+             // document.querySelector(".collum_2").innerHTML = print.collum_2;
+         }
+
+         //        document.querySelector(".luk").addEventListener("click", () => {
+         // //link tilbage til den foregående side på "luk" knappen
+         // history.back();
+         // })
+
+     </script>
+
+ </body>
+
+ </html>

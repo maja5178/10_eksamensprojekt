@@ -5,6 +5,9 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Tattoos</title>
+
+     <link rel="stylesheet" href="general.css">
+     <link rel="stylesheet" href="tato_style.css">
  </head>
 
  <body>
@@ -19,10 +22,8 @@
      <section id="destinatioer"></section>
      <template>
          <article>
-             <div class="test_flex">
-                 <h1 class="h1"></h1>
-
-                 <div class="img"></div>
+             <div class="gallery">
+                 <img class="img" src="" alt="">
              </div>
          </article>
      </template>
@@ -89,8 +90,9 @@
 
              artikler.forEach(element => {
                  let klon = template.cloneNode(true).content;
-                 klon.querySelector(".h1").textContent = `${element.title.rendered}`;
-                 klon.querySelector(".img").innerHTML = `${element.billede.rendered}`;
+                 //                 klon.querySelector(".h1").textContent = `${element.title.rendered}`;
+                 klon.querySelector(".img").src = `${element.billede.guid}`;
+                 klon.querySelector(".img").alt = `${element.title.rendered}`;
                  klon.querySelector("article").addEventListener("click", () => {
                      location.href = `destination.html?id=${element.id}`;
                  })
