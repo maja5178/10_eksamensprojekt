@@ -130,13 +130,14 @@ nav ul li:last-child {
 
 /********************* NAV SLUT*********************/
 
-/*********************** FOOTER **************************/
+/*********************** FOOTER MOBIL **************************/
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     margin: auto;
+    padding-top: 2vw;
 
     width: 250px;
 }
@@ -151,7 +152,8 @@ footer .line {
 }
 
 footer img {
-    width: 35px;
+    width: 25px;
+    padding: 1vw;
 }
 
 footer .follow {
@@ -174,7 +176,7 @@ footer .bottom h4 {
     padding-right: 2rem;
 }
 
-/*********************** FOOTER SLUT **************************/
+/*********************** FOOTER MOBIL SLUT **************************/
 
 
 @media only screen and (min-width: 600px) {
@@ -253,15 +255,16 @@ footer .bottom h4 {
     /*********************** FOOTER **************************/
 
     footer {
-        width: 900px;
+        width: 700px;
+
     }
 
     footer .line {
-        width: 900px;
+        width: 500px;
     }
 
     footer img {
-        width: 35px;
+        width: 25px;
     }
 
     footer .bottom {
@@ -269,7 +272,7 @@ footer .bottom h4 {
         flex-direction: row;
         flex-wrap: wrap-reverse;
         justify-content: space-between;
-        width: 800px;
+        width: 600px;
     }
 
     /*********************** FOOTER SLUT **************************/
@@ -278,6 +281,7 @@ footer .bottom h4 {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
     /*********************** FOOTER **************************/
+/*
     footer {
         width: 600px;
     }
@@ -289,6 +293,7 @@ footer .bottom h4 {
     footer .bottom {
         width: 600px;
     }
+*/
 
     /*********************** FOOTER SLUT **************************/
 }
