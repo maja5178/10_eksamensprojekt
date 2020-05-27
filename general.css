@@ -15,8 +15,7 @@ body {
     width: 70%;
     height: 100vh;
     z-index: -1;
-
-
+    opacity: 50%
 }
 
 /********************* NAV *********************/
@@ -252,11 +251,11 @@ footer .bottom h4 {
     /*********************** FOOTER **************************/
 
     footer {
-        width: 1000px;
+        width: 900px;
     }
 
     footer .line {
-        width: 1000px;
+        width: 900px;
     }
 
     footer img {
@@ -268,7 +267,7 @@ footer .bottom h4 {
         flex-direction: row;
         flex-wrap: wrap-reverse;
         justify-content: space-between;
-        width: 900px;
+        width: 800px;
     }
 
     /*********************** FOOTER SLUT **************************/

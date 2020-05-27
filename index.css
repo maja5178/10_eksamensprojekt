@@ -26,7 +26,7 @@
 
 #about .col {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
 }
 
@@ -94,6 +94,28 @@
 
     /********************** ABOUT SLUT *************************/
 
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+
+    /********************** ABOUT *************************/
+
+    #about .col {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        max-width: 600px;
+    }
+
+    #about .col {
+        padding-bottom: 2vw;
+    }
+
+    #about .col .img {
+        width: 200px;
+    }
+
+    /********************** ABOUT SLUT *************************/
 }
 
 
