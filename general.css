@@ -15,7 +15,9 @@ body {
     width: 70%;
     height: 100vh;
     z-index: -1;
-    opacity: 50%
+    opacity: 50%;
+
+
 }
 
 /********************* NAV *********************/
