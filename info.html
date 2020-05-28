@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="DA">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forside</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="info_style.css">
+</head>
+
+<body>
+    <nav>
+
+        <div class="nav_top">
+            <a href="index.html">
+                <div class="logo">
+                    <h2>tato seb</h2>
+                    <!--                <img src="Logo/logo_new_21-5.svg" alt="21-5">-->
+                </div>
+            </a>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
+        <div class="nav_right hide">
+
+            <ul class="nav_links">
+
+                <li>
+                    <a href="tattoos.html">Tattoos</a>
+                </li>
+
+                <li>
+                    <a href="prints.html">Prints</a>
+                </li>
+
+                <li>
+                    <a href="info.html">Info</a>
+                </li>
+
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="background hide ">
+        <div class="image"></div>
+        <div class="banner"></div>
+    </div>
+
+    <section id="background_banner"></section>
+
+
+    <section id="info">
+        <h1>Info</h1>
+        <template>
+            <article>
+                <div class="container">
+                    <div class="col">
+                        <h2 class="h2"></h2>
+                        <p class="p"></p>
+
+                    </div>
+                    <div class="col">
+                        <img class="img" src="" alt="">
+                    </div>
+                </div>
+            </article>
+        </template>
+
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="top">
+            <div class="line"></div>
+            <div class="follow">
+                <div class="col">
+                    <h4>FOLLOW ME</h4>
+                </div>
+                <div class="col">
+                    <img src="image/SVG/facebook_icon.svg" alt="facebook icon">
+                </div>
+                <div class="col">
+                    <img src="image/SVG/instagram_icon.svg" alt="instagram icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <h4>Sebastian Guldager © 2020</h4>
+            <h4>Registreret tatovør ved Sikkerhedsstyrelsen</h4>
+        </div>
+    </footer>
+
+
+    <script src="nav.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const posturl = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/information/";
+
+        let artikler = [];
+        let template;
+
+
+        function start() {
+            console.log("start");
+            hentJSON();
+        }
+
+        async function hentJSON() {
+            console.log("hent json");
+
+            const resspons = await fetch(posturl)
+            artikler = await resspons.json();
+            visTemplate();
+        }
+
+        function visTemplate() {
+
+            console.log(artikler);
+            let dataFill = document.querySelector("#info");
+            let template = document.querySelector("template");
+
+
+            artikler.forEach(element => {
+                let klon = template.cloneNode(true).content;
+                klon.querySelector(".p").textContent = `${element.tekst}`;
+                klon.querySelector(".h2").textContent = `${element.overskrift}`;
+                klon.querySelector(".img").src = `${element.billede.guid}`;
+                klon.querySelector(".img").alt = `${element.title.rendered}`;
+                //                klon.querySelector("article").addEventListener("click", () => {
+                // location.href = `destination.html?id=${element.id}`;
+                // })
+                dataFill.appendChild(klon);
+            })
+        }
+
+    </script>
+</body>
+
+</html>

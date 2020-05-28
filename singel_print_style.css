@@ -1,0 +1,175 @@
+/*********************** TOP_CONTENT **************************/
+
+#top_content .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: center;
+    /*    width: 400px;
+*/
+    margin-left: none;
+}
+
+.h2_1 {
+    padding-top: 17vw;
+
+    color: #1319A2;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.h2_2 {
+    display: none;
+    color: #1319A2;
+}
+
+.breadcrumb {
+    padding-right: 20vw;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #1319A2;
+}
+
+.breadcrumb a:hover {
+    color: #ff2700;
+}
+
+.print_billeder {
+    background-color: rgba(255, 255, 255, 0.70);
+    padding: 2vw;
+    margin-top: 1vw;
+}
+
+.print_billeder .stor_billede img {
+    width: 250px;
+}
+
+.print_billeder .mini_billeder img {
+    width: 55px;
+    padding: 1vw;
+}
+
+.print_billeder .mini_billeder {
+    width: 60px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.p {
+    width: 250px;
+}
+
+.pris {
+    width: 250px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 1.3rem;
+    margin-bottom: 1vw;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #1319A2;
+    padding: 2vw;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+}
+
+/*********************** TOP_CONTENT SLUT (mobil) **************************/
+
+@media only screen and (min-width: 600px) {
+
+
+    /*********************** TOP_CONTENT **************************/
+
+    #top_content .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        width: 1000px;
+        padding-top: 8vw;
+
+        margin-left: 10vw;
+        margin-right: 6vw;
+
+    }
+
+    .h2_1 {
+        display: none;
+        /*
+        padding-top: 17vw;
+
+        color: #1319A2;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        align-items: center;
+*/
+    }
+
+    .h2_2 {
+        display: block;
+        color: #1319A2;
+        font-size: 2rem;
+    }
+
+    .breadcrumb {
+        padding-right: 0vw;
+    }
+
+    .print_billeder .stor_billede img {
+        width: 400px;
+    }
+
+    .print_billeder .mini_billeder img {
+        padding: 0.3vw;
+    }
+
+
+    .col_txt {
+        padding: 2vw;
+    }
+
+    .p {
+        width: 400px;
+        font-size: 1.1rem;
+    }
+
+    .pris {
+        width: 400px;
+
+        justify-content: flex-end;
+    }
+
+    .button {
+        align-items: flex-end;
+    }
+
+    button {
+        padding: 1vw;
+    }
+
+    /*********************** TOP_CONTENT SLUT **************************/
+}

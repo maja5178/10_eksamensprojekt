@@ -1,0 +1,96 @@
+/********************** ABOUT *************************/
+
+#info {
+    margin: 0;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+    /*    background: red;*/
+}
+
+#info h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 2vw;
+    margin-bottom: 0vw;
+
+}
+
+#info h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 4vw;
+    margin-bottom: 0vw;
+
+}
+
+
+#info .col {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    align-items: center;
+
+    /*
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background: red;
+*/
+}
+
+#info .container p {
+    font-size: 1rem;
+    max-width: 200px;
+    justify-self: center;
+    margin-top: 1vw;
+}
+
+#info .container .img {
+    width: 200px;
+    justify-self: center;
+}
+
+/********************** ABOUT SLUT *************************/
+
+@media only screen and (min-width: 600px) {
+
+
+    /********************** ABOUT *************************/
+
+    #info .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        max-width: 900px;
+        margin: auto;
+    }
+
+    #info .col {
+        align-items: center;
+        padding-bottom: 2vw;
+    }
+
+
+
+    #info .container .col .p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        padding: 2vw;
+
+        grid-column: span 2;
+    }
+
+    #info .col .img {
+        width: 250px;
+
+    }
+
+    #info article:nth-child(2n) {
+        background-color: red;
+    }
+
+    /********************** ABOUT SLUT *************************/
+}

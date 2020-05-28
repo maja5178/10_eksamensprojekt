@@ -31,12 +31,8 @@ img {
 #gallery_wall .gallery {}
 
 
-#gallery_wall article:nth-child(6n +1) {
-
-    grid-column: span 2;
-    grid-row: span 2;
-
-
+#gallery_wall:nth-child(2n) {
+    background-color: aqua;
 }
 
 
