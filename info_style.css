@@ -1,4 +1,4 @@
-/********************** ABOUT *************************/
+/********************** INFO *************************/
 
 #info {
     margin: 0;
@@ -54,12 +54,12 @@
     justify-self: center;
 }
 
-/********************** ABOUT SLUT *************************/
+/********************** INFO SLUT *************************/
 
 @media only screen and (min-width: 600px) {
 
 
-    /********************** ABOUT *************************/
+    /********************** INFO *************************/
 
     #info .container {
         display: grid;
@@ -75,12 +75,18 @@
 
 
 
-    #info .container .col .p {
-        font-size: 1.1rem;
-        max-width: 600px;
+    #info .txt {
         padding: 2vw;
 
+        display: flex;
+        flex-direction: column;
+
         grid-column: span 2;
+    }
+
+    #info .container .p {
+        max-width: 600px;
+        font-size: 1.1rem;
     }
 
     #info .col .img {
@@ -89,8 +95,12 @@
     }
 
     #info article:nth-child(2n) {
-        background-color: red;
+/*        background-color: red;*/
+        /*
+        display: flex;
+        flex-direction: row-reverse;
+*/
     }
 
-    /********************** ABOUT SLUT *************************/
+    /********************** INFO SLUT *************************/
 }

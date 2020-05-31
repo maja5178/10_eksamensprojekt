@@ -9,14 +9,14 @@
     display: none;
 }
 
-/********************** ABOUT *************************/
+/********************** ABOUT (mobil) *************************/
 
 #about {
     margin: 0;
 
     margin-left: 10vw;
     margin-right: 10vw;
-    background: red;
+/*    background: red;*/
 }
 
 #about h1 {
@@ -27,6 +27,8 @@
     margin-top: 2vw;
     margin-bottom: 0vw;
     padding-top: 0vw;
+
+
 }
 
 #about .col {
@@ -51,7 +53,7 @@
     justify-self: center;
 }
 
-/********************** ABOUT SLUT *************************/
+/********************** ABOUT SLUT (mobil)*************************/
 
 @media only screen and (min-width: 600px) {
 
@@ -98,7 +100,7 @@
     }
 
     #about article:nth-child(2n) {
-        background-color: blue;
+/*        background-color: blue;*/
     }
 
     /********************** ABOUT SLUT *************************/
