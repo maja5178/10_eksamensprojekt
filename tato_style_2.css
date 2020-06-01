@@ -6,15 +6,6 @@
 
 }
 
-h1 {
-    font-family: 'Shojumaru', cursive;
-
-
-}
-
-
-
-
 .container {
     max-width: 200px;
     margin: auto;
@@ -61,14 +52,6 @@ justify-content: center;
 
 
 @media only screen and (min-width: 600px) {
-
-
-    h1 {
-        font-family: 'Shojumaru', cursive;
-        font-size: 2.5rem;
-
-
-    }
 
     .container {
         max-width: 800px;

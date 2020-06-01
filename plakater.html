@@ -42,7 +42,7 @@
                 </li>
 
                 <li>
-                    <a href="prints.html">Plakater</a>
+                    <a href="plakater.html">Plakater</a>
                 </li>
 
                 <li>
@@ -75,7 +75,7 @@
         <article>
             <div class="gallery">
                 <img class="img" src="" alt="">
-<!--
+                <!--
                 <h1 class="h1"></h1>
                 <p>se mere</p>
 -->
@@ -143,7 +143,7 @@
                 //                 klon.querySelector(".h1").textContent = `${element.title.rendered}`;
                 klon.querySelector(".img").src = `${element.billede.guid}`;
                 klon.querySelector(".img").alt = `${element.title.rendered}`;
-// klon.querySelector(".h1").textContent = `${element.title.rendered}`
+                // klon.querySelector(".h1").textContent = `${element.title.rendered}`
                 klon.querySelector("article").addEventListener("click", () => {
                     location.href = `plakat.html?id=${element.id}`;
                 })
