@@ -1,0 +1,232 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+/************************ TOP_CONTENT (MOBIL) ***************************/
+
+
+#top_content {
+    max-width: 200px;
+    margin: auto;
+    padding-top: 16vw;
+}
+
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    color: #1319A2;
+
+    font-family: 'nuku_nukuregular';
+    letter-spacing: 1px;
+}
+
+#top_content .h2_2 {
+    display: none
+}
+
+.breadcrumb {}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #1319A2;
+}
+
+.breadcrumb a:hover {
+    color: #ff2700;
+}
+
+.white_backgrund {
+    background-color: rgba(255, 255, 255, 0.69);
+    padding: 3vw;
+}
+
+.pris {
+    background-color: rgba(255, 255, 255, 0.69);
+    padding: 3vw;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#top_content .pris p {
+    margin-top: 0px;
+}
+
+#top_content .fragt {
+    padding: 3vw;
+}
+
+#top_content .fragt .overskrift {
+
+    margin-bottom: 0px;
+
+}
+
+#top_content .fragt p {
+    margin-top: 0px;
+}
+
+
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #1319A2;
+    padding: 2vw;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+}
+
+
+
+/************************ TOP_CONTENT (MOBIL) SLUT ***************************/
+
+
+/************************ BOTTOM_CONTENT (MOBIL) ***************************/
+
+
+#bottom_content {
+    max-width: 200px;
+    margin: auto;
+}
+
+#bottom_content h2 {
+    margin-top: 10vw;
+    margin-bottom: 0vw;
+}
+
+#bottom_content p {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+/************************ BOTTOM_CONTENT (MOBIL) SLUT***************************/
+
+
+@media only screen and (min-width: 600px) {
+
+    /************************ TOP_CONTENT ***************************/
+
+
+    #top_content {
+        max-width: 900px;
+        padding-top: 10vw;
+    }
+
+    #top_content .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #top_content .col {
+        width: 440px;
+    }
+
+
+    #top_content .h2_1 {
+        display: none
+    }
+
+    #top_content .h2_2 {
+        display: block;
+
+        font-size: 1.8rem;
+        margin: 0px;
+    }
+
+
+    .white_backgrund {
+        padding: 2vw;
+    }
+
+    .col_txt {
+        padding: 2vw;
+    }
+
+    .pris {
+        background-color: rgba(255, 255, 255, 0.69);
+        padding: 1vw;
+
+        width: 170px;
+
+
+        margin-left: 15vw;
+        ;
+    }
+
+    #top_content .pris p {
+        margin-top: 0px;
+    }
+
+    #top_content .fragt {
+        padding: 1vw;
+    }
+
+    #top_content .fragt .overskrift {
+        margin-bottom: 0px;
+    }
+
+    #top_content .fragt p {
+        margin-top: 0px;
+    }
+
+    button {
+        padding: 1vw;
+    }
+
+
+
+    /************************ TOP_CONTENT SLUT ***************************/
+
+
+    /************************ BOTTOM_CONTENT  ***************************/
+
+
+    #bottom_content {
+        max-width: 900px;
+
+    }
+
+    #bottom_content h2 {
+        margin-top: 2vw;
+        margin-bottom: 0vw;
+
+        justify-content: flex-start;
+    }
+
+    #bottom_content p {
+        margin-top: 1vw;
+        margin-bottom: 4vw;
+    }
+
+    /************************ BOTTOM_CONTENT  SLUT***************************/
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    #top_content {
+        max-width: 600px;
+        padding-top: 10vw;
+    }
+
+    #top_content .col {
+        width: 290px;
+    }
+
+    #bottom_content {
+        max-width: 600px;
+
+    }
+
+}

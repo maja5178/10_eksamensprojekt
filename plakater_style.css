@@ -52,68 +52,6 @@ justify-content: center;
 }
 
 
-
-/*********************** detailje tatovering ***************************/
-
-#detalje {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.8);
-    overflow: scroll;
-
-    z-index: 10;
-
-}
-
-#detalje .button {
-    font-size: 2rem;
-    background: none;
-    color: #ff2700;
-
-    border: none;
-    position: fixed;
-
-    top: 1em;
-    right: 1em;
-
-    cursor: pointer;
-}
-
-#detalje .tatovering {
-    /*
-    height: 80vh;
-    width: auto;
-    margin: auto;
-    padding: 2vw;
-    background-color: #ffffff;
-*/
-    width: 60vw;
-    margin: auto;
-
-
-}
-
-#detalje img {
-
-
-    border: none;
-
-    margin-top: 7vw;
-    margin-bottom: 7vw;
-}
-
-
-.skjul {
-    display: none;
-}
-
-
-/*********************** detailje tatovering slut ***************************/
-
-
 @media only screen and (min-width: 600px) {
 
     .container {
@@ -150,35 +88,8 @@ justify-content: center;
         grid-row: span 2;
     }
 
-
-
-    /*********************** detailje tatovering ***************************/
-
-
-
-    #detalje .button {
-        font-size: 3rem;
-
-        top: 1.5em;
-        left: 1.5em;
-    }
-
-    #detalje .tatovering {
-        width: 38vw;
-        margin: auto;
-
-
-    }
-
-    #detalje img {
-        border: solid white 16px;
-        margin-right: 3vw;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-    }
-
-    /*********************** detailje tatovering slut ***************************/
 }
+
 
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
