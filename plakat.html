@@ -6,8 +6,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Plakat</title>
 
-     <link rel="stylesheet" href="general.css">
      <link rel="stylesheet" href="singel_plakat.css">
+     <link rel="stylesheet" href="general.css">
+
 
      <link rel="stylesheet" href="font/stylesheet.css">
 
@@ -89,9 +90,11 @@
                  <div class="pris">
                      <p class="lille_plakat_pris"></p>
                      <p class="stor_plakat_pris"></p>
-                     <a href="">
-                         <button>Bestil</button>
-                     </a>
+
+                     <div class="button_bestil">
+                         <p>Bestil</p>
+                     </div>
+
                  </div>
 
                  <div class="fragt">
@@ -120,6 +123,73 @@
 
      </section>
 
+
+
+
+     <div class="bestil_modal no_show">
+         <div class="modal">
+             <button class="btn_close">X</button>
+
+             <div class="modal_overskrift">
+                 <div>
+                     <h2>
+                         Bestilling
+                     </h2>
+                     <p>
+                         Ved bestilling her sendes der sender du en e-mail med bestillingen. Når e-mailen er modtaget og bestillingen er sat igen vil du modtage en e-mail med kvittering og et ordrenummer.
+                     </p>
+                 </div>
+
+                 <form>
+                     <div class="flex">
+                         <input text="text" value="Fornavn" class="input">
+                         <input type="text" value="Efternavn" class="input">
+                     </div>
+
+                     <p><b>Størrelse</b></p>
+                     <div class="box">
+                         <input type="checkbox">
+                         <p>20x20 print</p>
+                     </div>
+                     <div class="box">
+                         <input type="checkbox">
+                         <p>40x40 print</p>
+                     </div>
+
+                     <input type="email" value="Din e-mail" class="input" name="email">
+
+                     <p><b>Afhentning/forsendelse:</b></p>
+
+                     <div class="box">
+                         <input type="checkbox">
+                         <p>Afhentning i butik</p>
+                     </div>
+                     <div class="box">
+                         <input type="checkbox">
+                         <p>Sendes med Postnord</p>
+                     </div>
+
+                     <input type="text" value="Adresse" class="input">
+
+                     <div class="flex">
+                         <input type="text" value="Post nr." class="input">
+                         <input type="text" value="By navn" class="input">
+                     </div>
+
+                     <input type="text" value="Kommentar" class="input">
+
+
+                 </form>
+                 <div class="btn">
+                     <input type="button" value="Bestil" class="btn_bestil">
+                 </div>
+
+             </div>
+         </div>
+     </div>
+
+
+
      <footer>
          <div class="top">
              <div class="line"></div>
@@ -143,7 +213,12 @@
      </footer>
 
 
+
+
+
+
      <script src="nav.js"></script>
+     <script src="modal.js"></script>
 
 
      <script>
@@ -179,17 +254,7 @@
 
              document.querySelector(".fragt_1").textContent = plakat.fragt_1;
              document.querySelector(".fragt_2").textContent = plakat.fragt_2;
-
-
          }
-         //             document.querySelector(".h2_1").textContent = print.title.rendered;
-         // document.querySelector(".h2_2").textContent = print.title.rendered;
-         // document.querySelector(".navn").textContent = print.title.rendered;
-         // document.querySelector(".p").textContent = print.beskrivelse;
-         // document.querySelector(".pris").textContent = print.pris;
-         // document.querySelector(".mini_billede_1").src = print.mini_billede_1.guid;
-         // document.querySelector(".mini_billede_2").src = print.mini_billede_2.guid;
-         // document.querySelector(".mini_billede_3").src = print.mini_billede_3.guid;
 
      </script>
 

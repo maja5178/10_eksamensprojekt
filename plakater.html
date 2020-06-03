@@ -75,7 +75,12 @@
         <template>
             <article>
                 <div class="gallery">
+
                     <img class="img" src="" alt="">
+                    <div class="txt_content">
+                        <h3 class="h3"></h3>
+                        <p>Se mere</p>
+                    </div>
                 </div>
             </article>
         </template>
@@ -142,6 +147,7 @@
 
                 klon.querySelector(".img").src = `${element.billede.guid}`; // src --> stigen hen til billedet
                 klon.querySelector(".img").alt = `${element.title.rendered}`; //tilføjer alt tekst
+                klon.querySelector(".h3").innerHTML = `${element.title.rendered}`;
 
                 klon.querySelector("article").addEventListener("click", () => { //clik på article
                     location.href = `plakat.html?id=${element.id}`; //ny html siden med id
