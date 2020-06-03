@@ -71,17 +71,16 @@
 
 
     <div class="container">
-        <section id="gallery_wall">
+        <section id="gallery_wall"></section>
 
-            <template>
-                <article>
-                    <div class="gallery">
-                        <img class="img" src="" alt="">
-                    </div>
-                </article>
-            </template>
+        <template>
+            <article>
+                <div class="gallery">
+                    <img class="img" src="" alt="">
+                </div>
+            </article>
+        </template>
 
-        </section>
 
     </div>
 
@@ -111,24 +110,23 @@
     <script src="nav.js"></script>
 
     <script>
+        //loader dom (document object model)
         document.addEventListener("DOMContentLoaded", start);
 
         const posturl = "http://majakepler.dk/kea/10_eksamenprojekt/wordpress/wp-json/wp/v2/plakat/";
 
         let artikler = [];
-        let template;
-
 
         function start() {
-            console.log("start");
+            console.log("start");//start i inspect
             hentJSON();
         }
 
         async function hentJSON() {
-            console.log("hent json");
+            console.log("hent json"); //json = array af objecter
 
-            const resspons = await fetch(posturl)
-            artikler = await resspons.json();
+            const resspons = await fetch(posturl) //await kun når den er asynkron
+            artikler = await resspons.json(); //sikker json
 
             visTemplate();
         }
@@ -142,12 +140,12 @@
 
             artikler.forEach(element => {
                 let klon = template.cloneNode(true).content;
-                //                 klon.querySelector(".h1").textContent = `${element.title.rendered}`;
-                klon.querySelector(".img").src = `${element.billede.guid}`;
-                klon.querySelector(".img").alt = `${element.title.rendered}`;
-                // klon.querySelector(".h1").textContent = `${element.title.rendered}`
-                klon.querySelector("article").addEventListener("click", () => {
-                    location.href = `plakat.html?id=${element.id}`;
+
+                klon.querySelector(".img").src = `${element.billede.guid}`; // src --> stigen hen til billedet
+                klon.querySelector(".img").alt = `${element.title.rendered}`;//tilføjer alt tekst
+
+                klon.querySelector("article").addEventListener("click", () => { //clik på article
+                    location.href = `plakat.html?id=${element.id}`; //ny html siden med id
                 })
                 dataFill.appendChild(klon);
             })

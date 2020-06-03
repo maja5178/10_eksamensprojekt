@@ -118,8 +118,16 @@
 
     }
 
-    #about article:nth-child(2n) {
-        /*        background-color: blue;*/
+    #about article:nth-child(2n) .col {
+        direction: rtl;
+        /*får billde og tekst til at skifte plads ved hveranden*/
+
+    }
+
+    #about article:nth-child(2n) .p {
+        text-align: end;
+        /*gør så teksten flugter til venstre kant blev endret med direction: rtl */
+
     }
 
     /********************** ABOUT SLUT *************************/

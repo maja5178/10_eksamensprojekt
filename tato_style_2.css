@@ -14,27 +14,12 @@
 #gallery_wall {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    /*    grid-template-rows: repeat(auto-fill, minmax(200px));*/
-    /*    grid-template-rows: 200px;*/
     grid-gap: 1rem;
 
 
 }
 
-#gallery_wall article {
-    /*
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-*/
-
-    /*    justify-items: stretch;*/
-
-}
+#gallery_wall article {}
 
 
 #gallery_wall article:nth-child(6n+2) {
@@ -83,13 +68,6 @@ justify-content: center;
 }
 
 #detalje .tatovering {
-    /*
-    height: 80vh;
-    width: auto;
-    margin: auto;
-    padding: 2vw;
-    background-color: #ffffff;
-*/
     width: 60vw;
     margin: auto;
 
@@ -97,8 +75,6 @@ justify-content: center;
 }
 
 #detalje img {
-
-
     border: none;
 
     margin-top: 7vw;
@@ -123,34 +99,20 @@ justify-content: center;
 
     #gallery_wall {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1.5fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 
         grid-auto-rows: repeat(auto-fill) 150px;
 
         grid-gap: 1.7rem;
     }
 
-    #gallery_wall img .img {
-        /*
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        justify-items: stretch;
-*/
-
-    }
-
-    #gallery_wall article:nth-child(7n+1) {
+    #gallery_wall article:nth-child(5n+1) {
         grid-column: span 2;
         grid-row: span 2;
     }
 
 
+    #gallery_wall img .img {}
 
     /*********************** detailje tatovering ***************************/
 
