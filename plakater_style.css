@@ -37,7 +37,7 @@ justify-content: center;
 }
 
 
-#gallery_wall article:nth-child(6n+2) {
+#gallery_wall article:nth-child(5n+2) {
     grid-column: span 2;
     grid-row: span 2;
 }
@@ -83,7 +83,7 @@ justify-content: center;
 
     }
 
-    #gallery_wall article:nth-child(7n+1) {
+    #gallery_wall article:nth-child(5n+1) {
         grid-column: span 2;
         grid-row: span 2;
     }

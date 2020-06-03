@@ -21,8 +21,7 @@
          <div class="nav_top">
              <a href="index.html">
                  <div class="logo">
-                     <h2>tato seb</h2>
-                     <!--                <img src="Logo/logo_new_21-5.svg" alt="21-5">-->
+                     <img src="image/tato_seb_logo.png" alt="tato seb logo">
                  </div>
              </a>
 
@@ -90,7 +89,9 @@
                  <div class="pris">
                      <p class="lille_plakat_pris"></p>
                      <p class="stor_plakat_pris"></p>
-                     <button>Beskrivelse</button>
+                     <a href="">
+                         <button>Bestil</button>
+                     </a>
                  </div>
 
                  <div class="fragt">
@@ -169,9 +170,9 @@
              document.querySelector(".img").src = plakat.billede.guid;
              document.querySelector(".img").alt = plakat.title.rendered;
 
-             document.querySelector(".beskrivelse").textContent = plakat.beskrivelse;
-             document.querySelector(".levering").textContent = plakat.levering;
-             document.querySelector(".kontakt").textContent = plakat.kontakt;
+             document.querySelector(".beskrivelse").innerHTML = plakat.beskrivelse;
+             document.querySelector(".levering").innerHTML = plakat.levering;
+             document.querySelector(".kontakt").innerHTML = plakat.kontakt;
 
              document.querySelector(".lille_plakat_pris").textContent = plakat.lille_plakat_pris;
              document.querySelector(".stor_plakat_pris").textContent = plakat.stor_plakat_pris;

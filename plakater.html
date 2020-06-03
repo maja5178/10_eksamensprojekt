@@ -21,8 +21,7 @@
         <div class="nav_top">
             <a href="index.html">
                 <div class="logo">
-                    <h2>tato seb</h2>
-                    <!--                <img src="Logo/logo_new_21-5.svg" alt="21-5">-->
+                    <img src="image/tato_seb_logo.png" alt="tato seb logo">
                 </div>
             </a>
 
@@ -118,7 +117,7 @@
         let artikler = [];
 
         function start() {
-            console.log("start");//start i inspect
+            console.log("start"); //start i inspect
             hentJSON();
         }
 
@@ -142,7 +141,7 @@
                 let klon = template.cloneNode(true).content;
 
                 klon.querySelector(".img").src = `${element.billede.guid}`; // src --> stigen hen til billedet
-                klon.querySelector(".img").alt = `${element.title.rendered}`;//tilføjer alt tekst
+                klon.querySelector(".img").alt = `${element.title.rendered}`; //tilføjer alt tekst
 
                 klon.querySelector("article").addEventListener("click", () => { //clik på article
                     location.href = `plakat.html?id=${element.id}`; //ny html siden med id

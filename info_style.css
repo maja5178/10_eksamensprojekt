@@ -95,11 +95,13 @@
     }
 
     #info article:nth-child(2n) {
-/*        background-color: red;*/
-        /*
-        display: flex;
-        flex-direction: row-reverse;
-*/
+        direction: rtl;
+    }
+
+    #info article:nth-child(2n) .p {
+        text-align: end;
+        /*gør så teksten flugter til venstre kant blev endret med direction: rtl */
+
     }
 
     /********************** INFO SLUT *************************/

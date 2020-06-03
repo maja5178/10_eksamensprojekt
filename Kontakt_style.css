@@ -5,7 +5,7 @@
 
     margin-left: 10vw;
     margin-right: 10vw;
-/*    background: red;*/
+    /*    background: red;*/
 }
 
 #kontakt h1 {
@@ -60,20 +60,22 @@
 
     #kontakt article {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        /*        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));*/
+
+        grid-template-columns: minmax(300px, 1fr) minmax(500px, 1fr);
         max-width: 800px;
         margin: auto;
     }
 
     #kontakt .col {
-        padding-bottom: 2vw;
+        /*        padding-bottom: 2vw;*/
     }
 
     #kontakt .txt {
         margin: 0px;
-
-        padding: 2vw;
-        grid-column: span 2;
+        /*
+padding: 2vw;
+*/
     }
 
     #kontakt .col p {
@@ -90,7 +92,14 @@
     }
 
     #kontakt article:nth-child(2n) {
-/*        background-color: blue;*/
+        direction: rtl;
+/*        grid-template-columns: minmax(500px, 1fr) minmax(300px, 1fr);*/
+    }
+
+    #kontakt article:nth-child(2n) .p {
+        text-align: end;
+        /*gør så teksten flugter til venstre kant blev endret med direction: rtl */
+
     }
 
     /********************** ABOUT SLUT *************************/

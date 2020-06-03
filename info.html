@@ -20,8 +20,7 @@
         <div class="nav_top">
             <a href="index.html">
                 <div class="logo">
-                    <h2>tato seb</h2>
-                    <!--                <img src="Logo/logo_new_21-5.svg" alt="21-5">-->
+                    <img src="image/tato_seb_logo.png" alt="tato seb logo">
                 </div>
             </a>
 
@@ -144,8 +143,8 @@
 
             artikler.forEach(element => {
                 let klon = template.cloneNode(true).content;
-                klon.querySelector(".p").textContent = `${element.tekst}`;
-                klon.querySelector(".h2").textContent = `${element.overskrift}`;
+                klon.querySelector(".p").innerHTML = `${element.tekst}`;
+                klon.querySelector(".h2").innerHTML = `${element.overskrift}`;
                 klon.querySelector(".img").src = `${element.billede.guid}`;
                 klon.querySelector(".img").alt = `${element.title.rendered}`;
                 //                klon.querySelector("article").addEventListener("click", () => {
