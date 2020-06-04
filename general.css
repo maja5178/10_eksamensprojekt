@@ -120,7 +120,7 @@ nav .nav_top {
     justify-content: space-around;
     padding: 3vw;
     margin-left: 4vw;
-    top: -1;
+    top: 0;
 }
 
 .logo {
@@ -220,7 +220,6 @@ footer .bottom {
 footer .bottom h4 {
     display: flex;
     flex-direction: column;
-    margin: 1;
     font-size: 0.9rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -348,5 +347,3 @@ footer .bottom h4 {
 
     /*********************** FOOTER SLUT **************************/
 }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}

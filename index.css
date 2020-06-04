@@ -4,7 +4,7 @@ html {
 
 #splash_video video {
     width: 100vw;
-    margin: none;
+    margin: 0vw;
     /*
     opacity: 100%;
     filter: grayscale(100%)
@@ -105,13 +105,6 @@ html {
 
     }
 
-    #about col. {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-
-
-    }
-
     #about .col {
         align-items: center;
         padding-bottom: 2vw;
@@ -171,7 +164,8 @@ html {
 
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media (min-width: 768px) and (max-width: 1024px) {
+
 
 
     /********************** ABOUT *************************/

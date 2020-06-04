@@ -1,7 +1,7 @@
-.img {
+img {
     object-fit: cover;
     width: 100%;
-    max-height: auto;
+    height: auto;
 
 
 }
@@ -54,7 +54,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.8);
-    overflow: scroll;
+    /*    overflow: scroll;*/
 
     z-index: 10;
 
@@ -68,8 +68,8 @@
     border: none;
     position: fixed;
 
-    top: 1em;
-    right: 1em;
+    top: 3vw;
+    right: 3vw;
 
     cursor: pointer;
 }
@@ -81,12 +81,14 @@
 
 }
 
-#detalje img {
-    border: none;
+
+#detalje .img_detalje {
+    border: solid 10px white;
 
     margin-top: 7vw;
     margin-bottom: 7vw;
 }
+
 
 
 .skjul {
@@ -130,8 +132,9 @@
     #detalje .button {
         font-size: 3rem;
 
-        top: 1.5em;
-        left: 1.5em;
+        top: 3vw;
+        left: 5vw;
+        ;
     }
 
     #detalje .tatovering {
@@ -141,21 +144,20 @@
 
     }
 
-    #detalje img {
+    #detalje .img_detalje {
         border: solid white 16px;
-        margin-right: 3vw;
         margin-top: 3vw;
-        margin-bottom: 3vw;
+        margin-bottom: 0vw;
     }
 
     /*********************** detailje tatovering slut ***************************/
 }
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
     .container {
-        max-width: 590px;
+        max-width: 720px;
 
     }
 
@@ -165,13 +167,16 @@
 
     #gallery_wall {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1.5fr));
-
-        grid-auto-rows: repeat(auto-fill) 100px;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 
         grid-gap: 1.5rem;
 
 
+    }
+
+    #gallery_wall article:nth-child(8n+2) {
+        grid-column: span 2;
+        grid-row: span 2;
     }
 
 

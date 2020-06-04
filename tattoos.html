@@ -89,7 +89,7 @@
 
          <article class="tatovering">
              <div class="test">
-                 <img class="img" src="" alt="">
+                 <img class="img_detalje" src="" alt="">
              </div>
 
          </article>
@@ -170,7 +170,8 @@
              detalje.classList.remove("skjul")
              detalje.querySelector("button").addEventListener("click", () => detalje.classList.add("skjul"))
 
-             detalje.querySelector(".img").src = `${element.billede.guid}`
+             detalje.querySelector(".img_detalje").src = `${element.billede.guid}`
+             detalje.querySelector(".img_detalje").alt = `${element.title.rendered}`;
 
 
 

@@ -282,13 +282,15 @@ h2 {
 
 
     #top_content {
-        max-width: 900px;
+        max-width: 1200px;
         padding-top: 10vw;
     }
 
     #top_content .container {
         display: flex;
         flex-direction: row;
+        margin-left: 12vw;
+        margin-right: 12vw;
     }
 
     #top_content .col {
@@ -356,7 +358,13 @@ h2 {
 
 
     #bottom_content {
-        max-width: 900px;
+        max-width: 1200px;
+
+    }
+
+    #bottom_content .container {
+        margin-left: 12vw;
+        margin-right: 12vw;
 
     }
 
@@ -373,22 +381,5 @@ h2 {
     }
 
     /************************ BOTTOM_CONTENT  SLUT***************************/
-
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    #top_content {
-        max-width: 600px;
-        padding-top: 10vw;
-    }
-
-    #top_content .col {
-        width: 290px;
-    }
-
-    #bottom_content {
-        max-width: 600px;
-
-    }
 
 }
