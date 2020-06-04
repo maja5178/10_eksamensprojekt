@@ -73,7 +73,7 @@
 .gallery p {
     display: none;
     font-size: 1.2rem;
-    color: blue;
+    color: #1319A2;
 
 
     font-family: 'nuku_nukuregular';
@@ -91,8 +91,6 @@
 
     .container {
         max-width: 1200px;
-
-        /*        background-color: red;*/
 
     }
 
@@ -129,7 +127,7 @@
     .gallery p {
         display: block;
         font-size: 1.5rem;
-        color: blue;
+        color: #1319A2;
 
 
         font-family: 'nuku_nukuregular';

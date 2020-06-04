@@ -5,7 +5,6 @@
 
     margin-left: 10vw;
     margin-right: 10vw;
-    /*    background: red;*/
 }
 
 #kontakt h1 {
@@ -21,11 +20,6 @@
     max-width: 250px;
     margin: auto;
 
-    /*
-    margin-left: 10vw;
-    margin-right: 10vw;
-    background: red;
-*/
 }
 
 
@@ -47,6 +41,26 @@
 }
 
 /********************** kontakt SLUT (mobil) *************************/
+
+
+/************************** MAPS (MOBIL) *********************************/
+
+#maps {
+    width: 220px;
+    margin: auto;
+
+}
+
+
+
+#maps .container iframe {
+    width: 220px;
+    height: 200px;
+}
+
+/************************** MAPS (MOBIL) SLUT*********************************/
+
+
 
 
 @media only screen and (min-width: 600px) {
@@ -96,4 +110,23 @@
 
     /********************** ABOUT SLUT *************************/
 
+
+
+    /************************** MAPS (MOBIL) *********************************/
+
+    #maps {
+        width: 550px;
+        margin: auto;
+
+    }
+
+
+    #maps .container iframe {
+        width: 550px;
+        height: 200px;
+    }
+
+    /************************** MAPS (MOBIL) SLUT*********************************/
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {}
