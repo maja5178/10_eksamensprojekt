@@ -43,7 +43,6 @@
 }
 
 #info .container p {
-    font-size: 1rem;
     max-width: 200px;
     justify-self: center;
     margin-top: 1vw;
@@ -86,7 +85,7 @@
 
     #info .container p {
         max-width: 600px;
-        font-size: 1.1rem;
+
     }
 
     #info .col .img {

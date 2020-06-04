@@ -202,6 +202,12 @@ h2 {
     padding-right: 3vw;
 }
 
+.button_bestil:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
+
 .button_bestil p {
     margin: 0vw;
 }
