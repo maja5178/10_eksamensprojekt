@@ -6,6 +6,7 @@
 
 }
 
+/**************************** PLAKATER *******************************/
 .container {
     max-width: 200px;
     margin: auto;
@@ -13,31 +14,16 @@
 
 #gallery_wall {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    /*    grid-template-rows: repeat(auto-fill, minmax(200px));*/
-    /*    grid-template-rows: 200px;*/
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    /*    grid-gap: 1.5rem;*/
+    column-gap: 2rem;
+    grid-row-gap: 1rem;
 
 
 }
 
-#gallery_wall article {
-    /*
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-*/
 
-    /*    justify-items: stretch;*/
-
-}
-
-
-#gallery_wall article:nth-child(5n+2) {
+#gallery_wall article:nth-child(5n+1) {
     grid-column: span 2;
     grid-row: span 2;
 }
@@ -50,6 +36,7 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .gallery .txt_content {
@@ -68,21 +55,23 @@ justify-content: center;
 }
 
 .gallery:hover img {
-    opacity: 60%
+    opacity: 50%
 }
 
 .gallery h3 {
+    visibility: hidden;
+
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.5px;
     line-height: 22px;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: black;
 
 }
 
 .gallery p {
-
-    font-size: 1.8rem;
+    display: none;
+    font-size: 1.2rem;
     color: blue;
 
 
@@ -90,70 +79,92 @@ justify-content: center;
     letter-spacing: 5px;
 
 
+
+
 }
+
+/**************************** PLAKATER SLUT *******************************/
 
 
 @media only screen and (min-width: 600px) {
 
     .container {
-        max-width: 850px;
+        max-width: 1200px;
+
+/*        background-color: red;*/
 
     }
 
     #gallery_wall {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1.5fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        column-gap: 2rem;
+        grid-row-gap: 1rem;
 
-        grid-auto-rows: repeat(auto-fill) 150px;
-
-        grid-gap: 1.7rem;
-    }
-
-    #gallery_wall img .img {
-        /*
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        justify-items: stretch;
-*/
+        margin-left: 13vw;
+        margin-right: 13vw;
 
     }
 
-    #gallery_wall article:nth-child(5n+1) {
+
+    #gallery_wall article:nth-child(3n+1) {
         grid-column: span 2;
         grid-row: span 2;
     }
 
-}
 
+    .gallery h3 {
+        visibility: visible;
 
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    .container {
-        max-width: 590px;
-
-    }
-
-    #gallery_wall img {
-        border: solid white 6px;
-    }
-
-    #gallery_wall {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1.5fr));
-
-        grid-auto-rows: repeat(auto-fill) 100px;
-
-        grid-gap: 1.5rem;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 0.5px;
+        line-height: 22px;
+        font-size: 1.3rem;
+        color: black;
 
 
     }
 
+    .gallery p {
+        display: block;
+        font-size: 1.5rem;
+        color: blue;
 
-}
+
+        font-family: 'nuku_nukuregular';
+        letter-spacing: 5px;
+
+
+
+
+    }
+
+
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+        .container {
+            max-width: 590px;
+
+
+        }
+
+        #gallery_wall img {
+            border: solid white 6px;
+        }
+
+        #gallery_wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1.5fr));
+
+            /*            grid-auto-rows: repeat(auto-fill) 100px;*/
+
+            grid-gap: 1.5rem;
+
+
+
+
+        }
+
+
+    }

@@ -84,7 +84,7 @@
         grid-column: span 2;
     }
 
-    #info .container .p {
+    #info .container p {
         max-width: 600px;
         font-size: 1.1rem;
     }

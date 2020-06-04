@@ -80,7 +80,7 @@ nav img {
 }
 
 .background .image {
-    background-image: url(image/baggrund.png);
+    /*    background-image: url(image/baggrund.png);*/
     background-repeat: no-repeat;
     background-size: cover;
 }

@@ -145,7 +145,7 @@
             artikler.forEach(element => {
                 let klon = template.cloneNode(true).content;
 
-                klon.querySelector(".img").src = `${element.billede.guid}`; // src --> stigen hen til billedet
+                klon.querySelector(".img").src = `${element.galleri_billede.guid}`; // src --> stigen hen til billedet
                 klon.querySelector(".img").alt = `${element.title.rendered}`; //tilføjer alt tekst
                 klon.querySelector(".h3").innerHTML = `${element.title.rendered}`;
 

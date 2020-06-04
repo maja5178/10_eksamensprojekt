@@ -6,6 +6,7 @@
 
 }
 
+/**************************** tatoveringer (mobil)*******************************/
 .container {
     max-width: 200px;
     margin: auto;
@@ -13,13 +14,11 @@
 
 #gallery_wall {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
 
-
+    column-gap: 2rem;
+    grid-row-gap: 1rem;
 }
-
-#gallery_wall article {}
 
 
 #gallery_wall article:nth-child(6n+2) {
@@ -31,14 +30,21 @@
     border: solid white 10px;
 }
 
-#gallery_wall img:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in;
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#gallery_wall img:hover {
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in;
+}
+
+/**************************** tatoveringer(mobil) slut *******************************/
 
 
-/*********************** detailje tatovering ***************************/
+/*********************** detailje tatovering (mobil) ***************************/
 
 #detalje {
     position: fixed;
@@ -87,23 +93,27 @@
 }
 
 
-/*********************** detailje tatovering slut ***************************/
+/*********************** detailje tatovering (mobil) slut ***************************/
 
 
 @media only screen and (min-width: 600px) {
 
     .container {
-        max-width: 850px;
-
+        max-width: 1200px;
     }
 
     #gallery_wall {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 
-        grid-auto-rows: repeat(auto-fill) 150px;
+        grid-template-rows: repeat(auto-fill, minmax(160px, 1fr));
 
-        grid-gap: 1.7rem;
+
+        column-gap: 2.2rem;
+        grid-row-gap: 1rem;
+
+        margin-left: 13vw;
+        margin-right: 13vw;
     }
 
     #gallery_wall article:nth-child(5n+1) {
@@ -111,8 +121,6 @@
         grid-row: span 2;
     }
 
-
-    #gallery_wall img .img {}
 
     /*********************** detailje tatovering ***************************/
 
