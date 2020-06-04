@@ -132,7 +132,6 @@
 
         async function hentJSON() {
             console.log("hent json"); //json = array af objecter
-
             const resspons = await fetch(posturl) //await kun når den er asynkron
             artikler = await resspons.json(); //sikker json
 
